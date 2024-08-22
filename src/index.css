@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.Moderustic-regular {
+    font-family: "Moderustic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Moderustic, sans-serif;
+}
+body{
+    background-color: #282B38 !important;
+    color: #fff !important;
+}
+.container{
+    position: relative;
+    width: 1140px;
+    background-color: #282B38;
+    margin: 0 auto;
+}
+.container_flex {
+    width: 1140px;
+}
+/*_____________________HEADER______________________*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+/* Общие стили для кнопок */
+button {
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: #E58D35;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+button:hover {
+    border: 1px solid black;
+    background-color: #F28A21;
+}
+
+.callBtn {
+    width: 170px;
+    height: 50px;
+}
+
+.promoBtn {
+    width: 293px;
+    height: 54px;
+}
+
+/*_____________________PROMO______________________*/
+.promo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1820px;
+    top: 20px;
+    z-index: 10;
+    margin-top: 30px;
+}
+
+.promo_text {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 309px;
+}
+
+.promo_flex {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 700px;
+}
+
+/* Заголовок и текст */
+h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 58px;
+    text-align: start;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 20px;
+    text-align: start;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* Стили для текста в promo_text_p */
+.promo_text_p {
+    width: 345px;
+    height: 54px;
+    margin-bottom: 30px;
+}
+
+.promo_text_p:nth-child(2) {
+    width: 420px;
+}
