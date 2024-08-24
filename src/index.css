@@ -6,25 +6,39 @@
     font-weight: 300;
     font-style: normal;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Moderustic, sans-serif;
 }
-body{
+
+body {
     background-color: #282B38 !important;
     color: #fff !important;
 }
-.container{
-    position: relative;
+
+.container {
     width: 1140px;
     background-color: #282B38;
     margin: 0 auto;
 }
+
 .container_flex {
-    width: 1140px;
+    position: relative; /* Это важно для корректного позиционирования абсолютного изображения */
+    width: 1140px; /* Убедитесь, что ширина соответствует вашему дизайну */
 }
+
+.container_special {
+    width: 1140px;
+    background-color: #282B38;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /*_____________________HEADER______________________*/
 header {
     display: flex;
@@ -42,7 +56,7 @@ header {
 /* Общие стили для кнопок */
 button {
     border: none;
-    border-radius: 20px;
+    border-radius: 20px !important;
     color: #ffffff;
     background-color: #E58D35;
     transition: background-color 0.3s, border 0.3s;
@@ -65,13 +79,9 @@ button:hover {
 
 /*_____________________PROMO______________________*/
 .promo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
     width: 1820px;
     top: 20px;
-    z-index: 10;
-    margin-top: 30px;
 }
 
 .promo_text {
@@ -97,11 +107,13 @@ h1 {
     margin-bottom: 30px;
 }
 
-p {
-    font-size: 20px;
-    text-align: start;
+.error {
+    font-size: 24px;
+    position: absolute;
+    text-align: end;
     font-weight: 300;
-    margin-bottom: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 /* Стили для текста в promo_text_p */
@@ -113,4 +125,312 @@ p {
 
 .promo_text_p:nth-child(2) {
     width: 420px;
+}
+
+.carousel-indicators {
+    margin-bottom: 5em !important;
+}
+
+/*_____________________FORM____________________*/
+form {
+    width: 626px;
+    height: 597px;
+    background-color: #363A4D;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 9px 9px 25px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 9px 9px 25px -6px rgba(0,0,0,0.75);
+    box-shadow: 9px 9px 25px -6px rgba(0,0,0,0.75);
+}
+
+.form_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 535px;
+    height: 390px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.form_btn {
+    margin-top: 40px;
+    width: 253px;
+    height: 68px;
+    border-radius: 30px!important;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.form_block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form_block_radio {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.input_form1 {
+    width: 248px;
+    height: 56px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+
+.custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Стили для лейбла, чтобы разместить чекбокс и кастомное отображение */
+.custom-checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Стили для кастомного квадрата */
+.custom-checkbox-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #adb5bd;
+    border-radius: 4px; /* Квадратные углы */
+    margin-right: 8px;
+    background-color: #fff;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* Стили для выбранного состояния */
+.custom-checkbox:checked + .custom-checkbox-box {
+    background-color: #0b76ef;
+    border-color: #0b76ef;
+}
+
+/* Стили для иконки галочки */
+.custom-checkbox:checked + .custom-checkbox-box::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(45deg);
+    position: relative;
+    top: 4px;
+    left: 5px;
+}
+
+/* Стили при наведении */
+.custom-checkbox-label:hover .custom-checkbox-box {
+    border-color: #0b76ef;
+}
+
+/* Стили при фокусе */
+.custom-checkbox:focus + .custom-checkbox-box {
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-input + label {
+    font-size: 1.25em;
+    text-align: center;
+    text-justify: distribute-all-lines;
+    width: 526px;
+    height: 45px;
+    font-weight: 700;
+    color: white;
+    border: 1px white dashed;
+    background-color: #363A4D;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 100px;
+    border-radius: 10px;
+}
+
+.file-input:focus + label,
+.file-input + label:hover {
+    background-color: #282B38;
+}
+
+.form-group_photo {
+    margin-top: 30px;
+    width: 526px;
+}
+
+.photo-name, .error {
+    font-size: 15px;
+    font-weight: 700;
+    color: firebrick;
+    margin: 0;
+    padding: 0;
+}
+
+.form-buttons {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 526px;
+    margin-bottom: 30px;
+}
+
+.input_form2 {
+    height: 56px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: none;
+    width: 526px;
+    padding: 10px;
+}
+
+.form-group_2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 526px;
+}
+
+.form-group_2 input {
+    width: 248px;
+}
+
+.form_container_2 .form-group:nth-child(2) {
+    width: 248px;
+}
+
+.form_container_1, .form_container_2 {
+    position: relative;
+}
+
+.form_container_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 526px;
+}
+
+.form_container_2 {
+    display: flex;
+    flex-direction: column;
+    width: 526px;
+}
+
+.form_container_2 .form-group:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 526px;
+}
+
+.textarea {
+    width: 526px;   /* Устанавливает ширину текстового поля */
+    height: 166px;  /* Устанавливает высоту текстового поля */
+    resize: none;   /* Отключает возможность изменения размеров текстового поля */
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+
+.form_container_2 .form_btn:nth-child(2) {
+    width: 138px;
+    height: 68px;
+    border-radius: 15px;
+    border: 1px solid #E58D35;
+    cursor: pointer;
+}
+
+.btn-back {
+    width: 138px;
+    height: 68px;
+    border-radius: 15px;
+    border: 1px solid #E58D35;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.form_container_circle {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -90px;
+    width: 258px;
+    height: 60px;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.circle.active {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.absolute-img-man {
+    position: absolute;
+    top: 0; /* Положение сверху относительно родителя */
+    left: 580px; /* Положение слева относительно родителя */
+    width: 625px; /* Ширина изображения */
+    height: 917px; /* Высота изображения */
+    z-index: 1; /* Убедитесь, что изображение находится выше формы */
+}
+
+.form_main_container{
+    width: 1207px;
+    height: 917px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+h2{
+    font-size: 3em !important;
+    margin-bottom: 50px;
+}
+
+.form_title{
+    height: 200px;
+    width: 750px;
 }
