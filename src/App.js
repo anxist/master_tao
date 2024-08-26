@@ -4,8 +4,14 @@ import { ReactComponent as Logo} from './image/logo.svg'
 import Carusel from "./components/Carusel";
 import UserForm from "./components/UserForm";
 import man from './image/man.png';
-import ph4 from "./image/ph4.png";
-
+import whuUsBlock1 from './image/Frame 7.png'
+import whuUsBlock2 from './image/Frame 6.png'
+import whuUsBlock3 from './image/Frame 5.png'
+import whuUsBlock4 from './image/Frame 4.png'
+import whuUsBlock5 from './image/Frame 3.png'
+import whuUsBlock6 from './image/Frame 2.png'
+import whuUsBlock7 from './image/Frame 1.png'
+import whuUsBlock8 from './image/Frame 8.png'
 
 function PhotoMan({ src, alt }) {
     return (
@@ -14,7 +20,103 @@ function PhotoMan({ src, alt }) {
             width={625}
             height={917}
             src={man}
-            alt={man}
+            alt={alt}
+        />
+    );
+}
+
+function WhyUsBlock1({ src, alt }) {
+    return (
+        <img
+            className="d-block UsBlockImg"
+            width={113}
+            height={113}
+            src={whuUsBlock1}
+            alt={alt}
+        />
+    );
+}
+
+function WhyUsBlock2({ src, alt }) {
+    return (
+        <img
+            className="d-block UsBlockImg"
+            width={113}
+            height={113}
+            src={whuUsBlock2}
+            alt={alt}
+        />
+    );
+}
+
+function WhyUsBlock3({ src, alt }) {
+    return (
+        <img
+            className="d-block UsBlockImg"
+            width={113}
+            height={113}
+            src={whuUsBlock3}
+            alt={alt}
+        />
+    );
+}
+
+function WhyUsBlock4({ src, alt }) {
+    return (
+        <img
+            className="d-block UsBlockImg"
+            width={113}
+            height={113}
+            src={whuUsBlock4}
+            alt={alt}
+        />
+    );
+}
+
+function WhyUsBlock5({ src, alt }) {
+    return (
+        <img
+            className="d-block UsBlockImg"
+            width={113}
+            height={113}
+            src={whuUsBlock5}
+            alt={alt}
+        />
+    );
+}
+
+function WhyUsBlock6({ src, alt }) {
+    return (
+        <img
+            className="d-block UsBlockImg"
+            width={113}
+            height={113}
+            src={whuUsBlock6}
+            alt={alt}
+        />
+    );
+}
+
+function WhyUsBlock7({ src, alt }) {
+    return (
+        <img
+            className="d-block UsBlockImg"
+            width={113}
+            height={113}
+            src={whuUsBlock7}
+            alt={alt}
+        />
+    );
+}
+
+function WhyUsBlock8({ src, alt }) {
+    return (
+        <img
+            className="d-block UsBlockImg"
+            width={113}
+            height={113}
+            src={whuUsBlock8}
+            alt={alt}
         />
     );
 }
@@ -42,12 +144,51 @@ function App() {
           <div className="container_flex">
               <div className="form_main_container">
                   <div className="form_title">
-                      <h2>Получить рассчет стоимости доставки вашего груза</h2>
+                      <p className="calculation">Получить рассчет стоимости доставки вашего груза</p>
                   </div>
                  <div className="form_flex">
                      <UserForm/>
                      <PhotoMan/>
                  </div>
+              </div>
+          </div>
+          <div className="why_us">
+                <div className="container_flex">
+                    <p>Почему стоит выбрать именно нас?</p>
+                </div>
+              <div className="why_us_blocks">
+                  <div className="why_us_block">
+                      <WhyUsBlock1/>
+                      <p>Таможенное оформление груза</p>
+                  </div>
+                  <div className="why_us_block">
+                      <WhyUsBlock8/>
+                      <p>Страховка груза</p>
+                  </div>
+                  <div className="why_us_block">
+                      <WhyUsBlock2/>
+                      <p>Проверка товара на брак</p>
+                  </div>
+                  <div className="why_us_block">
+                      <WhyUsBlock3/>
+                      <p>Доставка в любой город РФ</p>
+                  </div>
+                  <div className="why_us_block">
+                      <WhyUsBlock4/>
+                      <p>Консолидация на складе</p>
+                  </div>
+                  <div className="why_us_block">
+                      <WhyUsBlock5/>
+                      <p>Ответственное хранение груза</p>
+                  </div>
+                  <div className="why_us_block">
+                      <WhyUsBlock6/>
+                      <p>Помощь в оплате товара</p>
+                  </div>
+                  <div className="why_us_block">
+                      <WhyUsBlock7/>
+                      <p>Упаковка, переупаковка, паллетирование груза к международной перевозке</p>
+                  </div>
               </div>
           </div>
 

@@ -56,7 +56,7 @@ function Carusel() {
                         <div className="promo_text">
                             <h1>Прямое карго из Китая</h1>
                             <div className="promo_text_p">
-                                <p>Доставляем любые грузы из Китая по честной цене</p>
+                                <p className="description">Доставляем любые грузы из Китая по честной цене</p>
                             </div>
                             <button className='promoBtn' type='button'>Рассчитать стоимость</button>
                         </div>
@@ -70,7 +70,7 @@ function Carusel() {
                         <div className="promo_text">
                             <h1>Гарантируем сроки!</h1>
                             <div className="promo_text_p">
-                                <p>Если мы не уложимся в обозначенные сроки, доставка груза со скидкой до 90%</p>
+                                <p className="discrubtion">Если мы не уложимся в обозначенные сроки, доставка груза со скидкой до 90%</p>
                             </div>
                             <button className='promoBtn' type='button'>Рассчитать стоимость</button>
                         </div>
@@ -84,7 +84,7 @@ function Carusel() {
                         <div className="promo_text">
                             <h1>Выкуп товара с ТаоБао, 1688</h1>
                             <div className="promo_text_p">
-                                <p>Выкуп и доставка товаров с китайских торговых площадок.</p>
+                                <p className="discrubtion">Выкуп и доставка товаров с китайских торговых площадок.</p>
                             </div>
                             <button className='promoBtn' type='button'>Рассчитать стоимость</button>
                         </div>
@@ -98,7 +98,7 @@ function Carusel() {
                         <div className="promo_text">
                             <h1>Экспресс авто доставка</h1>
                             <div className="promo_text_p">
-                                <p>Доставка автотранспортом из Китая в Россию от 15 дней, от $0,5/кг</p>
+                                <p className="discrubtion">Доставка автотранспортом из Китая в Россию от 15 дней, от $0,5/кг</p>
                             </div>
                             <button className='promoBtn' type='button'>Рассчитать стоимость</button>
                         </div>
