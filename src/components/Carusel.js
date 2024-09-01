@@ -9,7 +9,7 @@ import ph4 from '../image/ph4.png';
 function PhotoFirst({ src, alt }) {
     return (
         <img
-            className="d-block w-100"
+            className="d-block w-100 photo_promo"
             src={ph1}
             alt={alt}
         />
@@ -19,7 +19,7 @@ function PhotoFirst({ src, alt }) {
 function PhotoSecond({ src, alt }) {
     return (
         <img
-            className="d-block w-100"
+            className="d-block w-100 photo_promo"
             src={ph2}
             alt={alt}
         />
@@ -29,7 +29,7 @@ function PhotoSecond({ src, alt }) {
 function PhotoThird({ src, alt }) {
     return (
         <img
-            className="d-block w-100"
+            className="d-block w-100 photo_promo"
             src={ph3}
             alt={alt}
         />
@@ -39,7 +39,7 @@ function PhotoThird({ src, alt }) {
 function PhotoFourth({ src, alt }) {
     return (
         <img
-            className="d-block w-100"
+            className="d-block w-100 photo_promo"
             src={ph4}
             alt={alt}
         />

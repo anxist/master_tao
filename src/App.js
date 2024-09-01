@@ -12,6 +12,7 @@ import whuUsBlock5 from './image/Frame 3.png'
 import whuUsBlock6 from './image/Frame 2.png'
 import whuUsBlock7 from './image/Frame 1.png'
 import whuUsBlock8 from './image/Frame 8.png'
+import Carusel_variants from "../src/components/Carusel_variants";
 
 function PhotoMan({ src, alt }) {
     return (
@@ -191,7 +192,9 @@ function App() {
                   </div>
               </div>
           </div>
-
+          <div className="container_flex">
+              <Carusel_variants/>
+          </div>
       </div>
     </div>
 
